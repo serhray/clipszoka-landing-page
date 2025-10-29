@@ -3,7 +3,8 @@ node_modules
 *.log
 .vercel
 
-# Vídeos grandes (exceto os comprimidos)
-i'ts alanzoka.mp4
+# Todos os vídeos (hospedar separadamente)
+*.mp4
 *.mov
 *.avi
+*.webm
