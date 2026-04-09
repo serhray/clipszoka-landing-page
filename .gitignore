@@ -3,7 +3,7 @@ node_modules
 *.log
 .vercel
 
-# Todos os vídeos (hospedar separadamente)
+# Vídeos - adicionar manualmente via Vercel
 *.mp4
 *.mov
 *.avi

@@ -3,117 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clipszoka - Clipes do Alanzoka</title>
-    <meta name="description" content="Página oficial do Clipszoka - Clipes e momentos do streamer Alanzoka. Projeto voluntário da comunidade.">
+    <title>clipszoka - Galeria de Mídia Imersiva</title>
+    <meta name="description" content="Galeria de mídia imersiva do fã-clube Clipszoka com melhores clipes, história do projeto e parceiros.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clipszoka - Galeria de Mídia Imersiva">
+    <meta property="og:description" content="Curadoria cinematográfica com os melhores momentos do Alanzoka e da comunidade Clipszoka.">
+    <meta property="og:image" content="capa 2.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clipszoka - Galeria de Mídia Imersiva">
+    <meta name="twitter:description" content="Curadoria cinematográfica com os melhores momentos do Alanzoka e da comunidade Clipszoka.">
+    <meta name="twitter:image" content="capa 2.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abyss: '#050505',
+                        twitch: '#9146FF',
+                        ember: '#ff6a3d',
+                        dusk: '#111320'
+                    },
+                    boxShadow: {
+                        glow: '0 0 30px rgba(255, 106, 61, 0.32)'
+                    },
+                    fontFamily: {
+                        display: ['Bebas Neue', 'sans-serif'],
+                        sans: ['Sora', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <!-- Header com foto e username -->
-        <header class="profile-header">
-            <div class="profile-image">
-                <img src="profile.jpg" alt="clipszoka" id="profileImg">
-            </div>
-            
-            <h1 class="username">clipszoka</h1>
-            <p class="profile-description">
-                Apenas uma conta de clipes do streamer alanzoka. Esse é um projeto totalmente voluntário, sem remuneração e sem conexão direta ao Alanzoka.
-            </p>
-        </header>
+<body class="bg-abyss text-zinc-100 font-sans selection:bg-ember/70 selection:text-white">
+    <a href="#galeria" class="skip-link">pular para galeria</a>
+    <div class="pointer-events-none fixed inset-0 -z-20 bg-[radial-gradient(circle_at_17%_16%,rgba(255,106,61,0.24),transparent_40%),radial-gradient(circle_at_78%_9%,rgba(108,167,255,0.18),transparent_28%),linear-gradient(180deg,#07070b,#080912_48%,#0a0d19)]"></div>
+    <div class="pointer-events-none fixed inset-0 -z-10 atmosphere-layer" aria-hidden="true"></div>
 
-        <!-- Vídeo It's Alanzoka -->
-        <div class="video-container">
-            <video controls>
+    <main>
+        <section class="hero-stage relative isolate min-h-[96vh] overflow-hidden border-b border-white/10 reveal">
+            <video class="absolute inset-0 h-full w-full object-cover" autoplay loop muted playsinline preload="metadata">
                 <source src="its alanzoka.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/65 to-[#07070b]"></div>
+            <div class="absolute inset-0 hero-noise" aria-hidden="true"></div>
+
+            <div class="section-shell hero-shell relative flex min-h-[96vh] flex-col justify-end">
+                <a href="https://x.com/clips_alanzoka" target="_blank" rel="noopener noreferrer" class="hero-chip">fã-clube oficial no X</a>
+                <h1 class="hero-title font-display uppercase text-white">clipszoka</h1>
+                <p class="hero-subtitle">Uma galeria de mídia imersiva com curadoria da comunidade para celebrar os melhores momentos do Alanzoka.</p>
+                <div class="mt-9 flex flex-wrap gap-3">
+                    <a href="#galeria" class="hero-cta hero-cta-primary">explorar clipes</a>
+                    <a href="#sobre" class="hero-cta hero-cta-ghost">nossa história</a>
+                </div>
+                <div class="hero-metrics" aria-label="destaques do projeto">
+                    <span>+500 recortes compartilhados</span>
+                    <span>curadoria colaborativa</span>
+                    <span>comunidade ativa desde 2021</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="alanzoka" class="reveal section-shell section-stack">
+            <div class="profile-showcase">
+                <div class="profile-copy">
+                    <p class="section-eyebrow">quem é alanzoka</p>
+                    <h2 class="profile-title">Alan Ferreira Pereira</h2>
+                    <p class="profile-lead">Alan Ferreira Pereira (São Paulo, 13 de maio de 1990), mais conhecido como Alanzoka, considerado um dos maiores streamers da plataforma Twitch no país.</p>
+                    <p class="profile-body">Formado em Gastronomia pela Universidade Anhembi Morumbi, estabeleceu-se como um youtuber no ano de 2011 em seu canal "EDGE", sigla para Electronic Desire Gamers Entertainment. Seu primeiro vídeo foi de Minecraft, mas foram jogos co-op e de terror, como Slender: The Eight Pages, Amnesia: The Dark Descent e Dead Space 2, que impulsionaram seu reconhecimento em 2012. Após renomear seu canal para "alanzoka", iniciou sua carreira na Twitch e começou a gravar vídeos de Five Nights at Freddy's e Fortnite.</p>
+                </div>
+                <figure class="profile-media">
+                    <img src="alansz.jpg" alt="Alanzoka em cena cinematográfica" loading="lazy" decoding="async" width="720" height="1280">
+                </figure>
+            </div>
+        </section>
+
+        <section id="galeria" class="reveal section-shell section-stack">
+            <div class="section-heading mb-10 flex items-end justify-between gap-4">
+                <div>
+                    <p class="section-eyebrow">melhores clipes</p>
+                    <h2 class="section-title">Galeria de Mídia Imersiva</h2>
+                    <p class="section-subtitle">Passe o cursor para ver o preview e clique para abrir em tela expandida.</p>
+                </div>
+                <span class="hidden rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-zinc-300 sm:inline-flex">16:9 cinematic cards</span>
+            </div>
+
+            <div class="stagger-group grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <button class="clip-card group" data-video="sustinho miside.mp4" data-title="Sustinho Miside" data-preview-start="6" data-preview-duration="2.8" aria-label="Abrir clipe Sustinho Miside">
+                    <img class="clip-cover" src="capa 1.png" alt="" loading="lazy" decoding="async" aria-hidden="true" width="1288" height="700">
+                    <video class="clip-preview" muted loop playsinline preload="none" aria-hidden="true">
+                        <source data-src="sustinho miside.mp4" type="video/mp4">
+                    </video>
+                    <span class="clip-sheen"></span>
+                    <span class="clip-grain"></span>
+                    <span class="clip-index">01</span>
+                    <span class="clip-label">Sustinho Miside</span>
+                    <span class="clip-meta">abrir clipe</span>
+                </button>
+                <button class="clip-card group" data-video="mercado do fall.mp4" data-title="Mercado do Fall" data-preview-start="5" data-preview-duration="2.6" aria-label="Abrir clipe Mercado do Fall">
+                    <img class="clip-cover" src="capa 2.png" alt="" loading="lazy" decoding="async" aria-hidden="true" width="1291" height="702">
+                    <video class="clip-preview" muted loop playsinline preload="none" aria-hidden="true">
+                        <source data-src="mercado do fall.mp4" type="video/mp4">
+                    </video>
+                    <span class="clip-sheen"></span>
+                    <span class="clip-grain"></span>
+                    <span class="clip-index">02</span>
+                    <span class="clip-label">Mercado do Fall</span>
+                    <span class="clip-meta">abrir clipe</span>
+                </button>
+                <button class="clip-card group" data-video="lethal company muito caos.mp4" data-title="Lethal Company Muito Caos" data-preview-start="9" data-preview-duration="3.2" aria-label="Abrir clipe Lethal Company Muito Caos">
+                    <img class="clip-cover" src="capa 3.png" alt="" loading="lazy" decoding="async" aria-hidden="true" width="1290" height="699">
+                    <video class="clip-preview" muted loop playsinline preload="none" aria-hidden="true">
+                        <source data-src="lethal company muito caos.mp4" type="video/mp4">
+                    </video>
+                    <span class="clip-sheen"></span>
+                    <span class="clip-grain"></span>
+                    <span class="clip-index">03</span>
+                    <span class="clip-label">Lethal Company Muito Caos</span>
+                    <span class="clip-meta">abrir clipe</span>
+                </button>
+                <button class="clip-card group" data-video="confusão.mp4" data-title="Confusão Total" data-preview-start="4" data-preview-duration="2.5" aria-label="Abrir clipe Confusão Total">
+                    <img class="clip-cover" src="capa 4.png" alt="" loading="lazy" decoding="async" aria-hidden="true" width="1289" height="706">
+                    <video class="clip-preview" muted loop playsinline preload="none" aria-hidden="true">
+                        <source data-src="confusão.mp4" type="video/mp4">
+                    </video>
+                    <span class="clip-sheen"></span>
+                    <span class="clip-grain"></span>
+                    <span class="clip-index">04</span>
+                    <span class="clip-label">Confusão Total</span>
+                    <span class="clip-meta">abrir clipe</span>
+                </button>
+                <button class="clip-card group" data-video="a melhor parte do jogo.mp4" data-title="A Melhor Parte do Jogo" data-preview-start="8" data-preview-duration="3" aria-label="Abrir clipe A Melhor Parte do Jogo">
+                    <img class="clip-cover" src="capa 5.png" alt="" loading="lazy" decoding="async" aria-hidden="true" width="1296" height="705">
+                    <video class="clip-preview" muted loop playsinline preload="none" aria-hidden="true">
+                        <source data-src="a melhor parte do jogo.mp4" type="video/mp4">
+                    </video>
+                    <span class="clip-sheen"></span>
+                    <span class="clip-grain"></span>
+                    <span class="clip-index">05</span>
+                    <span class="clip-label">A Melhor Parte do Jogo</span>
+                    <span class="clip-meta">abrir clipe</span>
+                </button>
+                <button class="clip-card group" data-video="geladeira safada.mp4" data-title="Geladeira Safada" data-preview-start="7" data-preview-duration="2.7" aria-label="Abrir clipe Geladeira Safada">
+                    <img class="clip-cover" src="capa 6.png" alt="" loading="lazy" decoding="async" aria-hidden="true" width="1282" height="691">
+                    <video class="clip-preview" muted loop playsinline preload="none" aria-hidden="true">
+                        <source data-src="geladeira safada.mp4" type="video/mp4">
+                    </video>
+                    <span class="clip-sheen"></span>
+                    <span class="clip-grain"></span>
+                    <span class="clip-index">06</span>
+                    <span class="clip-label">Geladeira Safada</span>
+                    <span class="clip-meta">abrir clipe</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="sobre" class="reveal section-shell section-stack">
+            <div class="section-heading mb-8">
+                <p class="section-eyebrow">sobre o projeto</p>
+                <h3 class="section-title">Um destaque para a comunidade que acolhe</h3>
+            </div>
+            <div class="about-layout">
+                <article class="about-panel">
+                    <p class="about-copy">Oi, tudo bom? Me chamo Sérgio e sou o admin do Clipszoka desde o início. Em 2021, no meio de uma fase complicada, as lives e vídeos do Alan foram um ponto de leveza. Esse projeto nasceu como forma de compartilhar essa mesma alegria com outras pessoas.</p>
+                </article>
+                <aside class="about-sidecard" aria-label="dados do projeto">
+                    <p class="about-side-eyebrow">desde 2021</p>
+                    <p class="about-side-title">feito por fã para fã</p>
+                    <p class="about-side-copy">Projeto comunitário e voluntário com foco em momentos que geram conexão, risada e identificação.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section id="parcerias" class="reveal section-shell section-stack">
+            <div class="section-heading mb-8">
+                <p class="section-eyebrow">parcerias</p>
+                <h3 class="section-title">Banners de parceria</h3>
+                <p class="section-subtitle">Plataformas e iniciativas que fortalecem a experiência da comunidade.</p>
+            </div>
+
+            <div class="stagger-group grid grid-cols-1 gap-5 lg:grid-cols-2">
+                <article class="partner-banner partner-banner-nuuvem">
+                    <div>
+                        <p class="partner-eyebrow">nuuvem</p>
+                        <h4 class="partner-title">Jogos, gift cards e ofertas em destaque</h4>
+                        <p class="partner-copy">Loja digital parceira com promoções frequentes para PC, consoles e assinaturas.</p>
+                    </div>
+                    <a href="https://click.linksynergy.com/deeplink?id=gfaUwKumQpg&mid=46796&murl=https%3a%2f%2fwww.nuuvem.com%2fbr-pt%2f&u1=clipszoka" target="_blank" rel="noopener noreferrer" class="partner-cta">acessar</a>
+                </article>
+
+                <article class="partner-banner partner-banner-multi">
+                    <div>
+                        <p class="partner-eyebrow">multitwitch+</p>
+                        <h4 class="partner-title">Até 4 transmissões ao mesmo tempo</h4>
+                        <p class="partner-copy">App para assistir Twitch e Kick simultaneamente em uma experiência multicam.</p>
+                    </div>
+                    <a href="https://multitwitch-plus.vercel.app" target="_blank" rel="noopener noreferrer" class="partner-cta">conhecer</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="join" class="reveal section-shell section-stack pb-24">
+            <div class="final-cta">
+                <div class="final-cta-copywrap">
+                    <p class="section-eyebrow">continue acompanhando</p>
+                    <h3 class="final-cta-title">A comunidade Clipszoka segue ao vivo</h3>
+                    <p class="final-cta-copy">Se quiser, continue com a gente no X para acompanhar novos cortes, momentos marcantes e atualizações do projeto.</p>
+                    <div class="final-cta-actions">
+                        <a href="https://x.com/clips_alanzoka" target="_blank" rel="noopener noreferrer" class="hero-cta hero-cta-primary">acompanhar no X</a>
+                        <a href="#galeria" class="hero-cta hero-cta-ghost">voltar para a galeria</a>
+                    </div>
+                </div>
+
+                <div class="livepix-widget" aria-label="Apoiar projeto Clipszoka">
+                    <button id="livepixToggle" class="livepix-toggle" type="button" aria-expanded="false" aria-controls="livepixPanel">
+                        <img src="profile.jpg" alt="Foto do perfil Clipszoka" width="400" height="400" loading="lazy" decoding="async">
+                        <span class="livepix-dot" aria-hidden="true"></span>
+                    </button>
+                    <aside id="livepixPanel" class="livepix-panel" aria-hidden="true">
+                        <p class="livepix-title">Support me</p>
+                        <p class="livepix-copy">Apoie o projeto Clipszoka com uma contribuição no LivePix.</p>
+                        <a class="livepix-link" href="https://livepix.gg/clipszoka" target="_blank" rel="noopener noreferrer">ir para livepix</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="clipModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-8">
+        <div id="modalBackdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+        <div class="modal-panel relative z-10 w-full max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-zinc-950 shadow-2xl">
+            <div class="modal-head flex items-center justify-between border-b border-white/10 px-5 py-3">
+                <h4 id="modalTitle" class="text-sm font-semibold uppercase tracking-wide text-zinc-100">Clip</h4>
+                <button id="closeClip" class="modal-close rounded-full border border-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-zinc-200 transition hover:border-ember hover:text-white">fechar</button>
+            </div>
+            <video id="clipVideo" class="modal-video aspect-video w-full bg-black" controls preload="none" playsinline>
                 Seu navegador não suporta a reprodução de vídeos.
             </video>
-        </div>
-
-        <!-- Conteúdo dos cards -->
-        <div class="cards-container">
-            <!-- Card Alanzoka -->
-            <div class="card expandable">
-                <div class="card-header">
-                    <h2 class="card-title">Alanzoka</h2>
-                    <div class="card-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content collapsed">
-                    <p class="card-description">
-                        Alan Ferreira Pereira (São Paulo, 13 de maio de 1990), mais conhecido como Alanzoka, é um streamer brasileiro. É considerado um dos maiores streamers da plataforma Twitch no país.
-                        <br><br>
-                        Formado em Gastronomia pela Universidade Anhembi Morumbi, Alanzoka estabeleceu-se como um youtuber no ano de 2011 em seu canal "EDGE", sigla para Electronic Desire Gamers Entertainment. Seu primeiro vídeo foi de Minecraft, mas foram os jogos de co-op e terror, como Slender: The Eight Pages, Amnesia e Dead Space 2, que impulsionaram seu reconhecimento em 2012. Após renomear seu canal para "alanzoka", começou sua carreira na Twitch, gravando vídeos de Five Nights at Freddy's e Fortnite.
-                    </p>
-                    <img src="images.jpg" alt="Alanzoka" class="card-image">
-                    
-                    <!-- Ícones de redes sociais -->
-                    <div class="social-links">
-                        <a href="https://www.twitch.tv/alanzoka?lang=pt-br" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitch">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@alanzoka" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/alanzoka" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card Sobre -->
-            <div class="card expandable">
-                <div class="card-header">
-                    <h2 class="card-title">Sobre</h2>
-                    <div class="card-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content collapsed">
-                    <p class="card-description">
-                        Oi tudo bom? Me chamo Sérgio, o único admin (até o momento) desde a criação do clipszoka.
-                        <br><br>
-                        Clipszoka foi uma ideia criada em 2021, estava passando por um momento bem complicado e as lives/videos do Alan me ajudaram muito, ele me tirou de uma barra bem difícil e me alegrava bastante até que eu decidi criar essa conta para poder compartilhar um pouco da alegria que eu sentia.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card Zokinhas -->
-            <div class="card expandable">
-                <div class="card-header">
-                    <h2 class="card-title">Zokinhas</h2>
-                    <div class="card-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content collapsed">
-                    <p class="card-description">
-                        Sabia que temos um grupo no Twitter/X? No Zokinhas você pode postar vídeos do Alan ou de outro streamer que você curta (com moderação obviamente).
-                        <br><br>
-                        <a href="https://x.com/i/communities/1923212777809674752" target="_blank" rel="noopener noreferrer" class="card-link">
-                            Acesse o grupo Zokinhas →
-                        </a>
-                    </p>
-                    <video autoplay loop muted playsinline class="card-image">
-                        <source src="ssstwitter.com_1761704494706.mp4" type="video/mp4">
-                        Seu navegador não suporta a reprodução de vídeos.
-                    </video>
-                </div>
-            </div>
         </div>
     </div>
 
