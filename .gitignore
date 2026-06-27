@@ -3,8 +3,8 @@ node_modules
 *.log
 .vercel
 
-# Vídeos - adicionar manualmente via Vercel
-*.mp4
-*.mov
-*.avi
-*.webm
+# Vídeos - removido do ignore para deploy no Vercel
+# *.mp4
+# *.mov
+# *.avi
+# *.webm
