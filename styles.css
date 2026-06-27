@@ -72,6 +72,8 @@ h4 {
 .section-stack {
     padding-top: var(--space-section);
     padding-bottom: var(--space-section);
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 880px;
 }
 
 .hero-shell {

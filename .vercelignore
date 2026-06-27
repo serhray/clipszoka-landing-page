@@ -2,6 +2,27 @@ node_modules
 .git
 *.log
 .DS_Store
+videos comprimidos/compressed.zip
+
+# Midias legadas (originais nao comprimidas na raiz)
+a melhor parte do jogo.mp4
+confusão.mp4
+geladeira safada.mp4
+its alanzoka.mp4
+lethal company muito caos.mp4
+mercado do fall.mp4
+sustinho miside.mp4
+ssstwitter.com_1761704494706.mp4
+Meu Vídeo.mp4
+
+# Capas e imagens legadas nao usadas em producao
+capa 1.png
+capa 2.png
+capa 3.png
+capa 4.png
+capa 5.png
+capa 6.png
+alansz.jpg
 
 # Todos os clipes adicionados:
 # ✅ lethal company muito caos.mp4
