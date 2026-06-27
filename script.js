@@ -16,51 +16,6 @@ const supportsHoverPreview = window.matchMedia('(hover: hover) and (pointer: fin
 let activeClip = '';
 let modalCloseTimeout = null;
 let livepixOpen = false;
-let lastFocusedElement = null;
-
-const MODAL_FOCUSABLE_SELECTOR = [
-    'a[href]',
-    'button:not([disabled])',
-    'input:not([disabled])',
-    'select:not([disabled])',
-    'textarea:not([disabled])',
-    '[tabindex]:not([tabindex="-1"])'
-].join(',');
-
-function getModalFocusableElements() {
-    if (!modal) {
-        return [];
-    }
-
-    return Array.from(modal.querySelectorAll(MODAL_FOCUSABLE_SELECTOR)).filter(
-        (el) => !el.hasAttribute('hidden') && el.getAttribute('aria-hidden') !== 'true'
-    );
-}
-
-function trapModalFocus(event) {
-    if (!modal || modal.classList.contains('hidden') || event.key !== 'Tab') {
-        return;
-    }
-
-    const focusable = getModalFocusableElements();
-    if (!focusable.length) {
-        event.preventDefault();
-        modal.focus();
-        return;
-    }
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    const activeElement = document.activeElement;
-
-    if (event.shiftKey && activeElement === first) {
-        event.preventDefault();
-        last.focus();
-    } else if (!event.shiftKey && activeElement === last) {
-        event.preventDefault();
-        first.focus();
-    }
-}
 
 function setLivepixOpen(nextOpen) {
     if (!livepixWidget || !livepixToggle || !livepixPanel) {
@@ -100,20 +55,12 @@ function closeModal() {
     }
 
     document.body.classList.remove('overflow-hidden', 'modal-open');
-    if (lastFocusedElement instanceof HTMLElement) {
-        lastFocusedElement.focus();
-    }
-    lastFocusedElement = null;
     activeClip = '';
 }
 
 function openModal(videoSrc, title) {
     if (!modal || !clipVideo || !videoSrc) {
         return;
-    }
-
-    if (document.activeElement instanceof HTMLElement) {
-        lastFocusedElement = document.activeElement;
     }
 
     if (modalCloseTimeout) {
@@ -135,12 +82,6 @@ function openModal(videoSrc, title) {
         modal.classList.add('is-open');
     }
     document.body.classList.add('overflow-hidden', 'modal-open');
-    const focusable = getModalFocusableElements();
-    if (focusable.length) {
-        focusable[0].focus();
-    } else {
-        modal.focus();
-    }
     activeClip = videoSrc;
 }
 
@@ -166,8 +107,6 @@ if (modalBackdrop) {
 }
 
 document.addEventListener('keydown', (event) => {
-    trapModalFocus(event);
-
     if (event.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
         closeModal();
     }
@@ -332,13 +271,7 @@ clipCards.forEach((card) => {
         card.addEventListener('blur', () => {
             stopPreview(preview);
         });
-    }
-});
-
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        previewVideos.forEach((preview) => {
-            stopPreview(preview);
-        });
+    } else {
+        ensurePreviewSource(preview);
     }
 });
